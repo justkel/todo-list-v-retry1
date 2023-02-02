@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* font-family: "Montserrat", "sans-serif"; */
+
+    --color-gray-50: rgb(243, 236, 230);
+    --color-gray-100: rgb(207, 201, 195);
+    --color-gray-300: rgb(99, 92, 86);
+    --color-gray-400: rgb(70, 65, 60);
+    --color-gray-500: rgb(37, 34, 31);
+    --color-gray-600: rgb(32, 29, 26);
+    --color-gray-700: rgb(31, 26, 22);
+
+    --color-primary-50: rgb(253, 224, 200);
+    --color-primary-120: #006570;
+    --color-primary-140: #377D71;
+    --color-primary-160: #7D9D9C;
+    --color-primary-100: rgb(253, 214, 183);
+    --color-primary-200: rgb(250, 191, 143);
+    --color-primary-400: rgb(223, 159, 41);
+    --color-primary-500: rgb(212, 136, 14);
+    --color-primary-700: rgb(212, 120, 14);
+    --color-primary-200-contrast: rgb(100, 46, 2);
+    --color-primary-500-contrast: white;
+
+    --color-error-100: rgb(255, 192, 180);
+    --color-error-500: rgb(199, 51, 15);
+
+    --color-primary-500-bg: rgb(63, 60, 58);
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+
+    --border-radius-small: 4px;
+    --border-radius-medium: 6px;
+
+    --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    /* background-color: var(--color-gray-500); */
+    color: var(--color-gray-100);
+    margin: 0;
+}
+
+main {
+    width: 90%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.font-class {
+  font-family: "Montserrat", "sans-serif";
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--color-primary-400); */
+}
+
+#login-signUp {
+  margin-top: 100px;
+}
+
+/* .start-for-free {
+  border-radius: 12px;
+  text-decoration: none;
+} */
+
+.btn {
+    cursor: pointer;
+    font: inherit;
+    padding: var(--space-2) var(--space-6);
+    background-color: var(--color-primary-120);
+    color: var(--color-primary-500-contrast);
+    border: 1px solid var(--color-primary-160);
+    border-radius: var(--border-radius-small);
+}
+
+.details {
+  font-family: "Montserrat", "sans-serif";
+}
+
+.details:hover {
+  background-color: var(--color-primary-140);
+  border-color: var(--color-primary-140);
+}
+
+/* .btn:hover, .btn:active {
+    background-color: var(--color-primary-140);
+    /* border-color: var(--color-primary-140); */
+/* } */ /*/ * */
+
+.alert {
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-error-100);
+    color: var(--color-error-500);
+    padding: var(--space-4);
+}
+
+.alert h2 {
+    font-size: 1rem;
+    margin: var(--space-2) 0;
+    text-transform: uppercase;
+}
+
+.alert p {
+    margin: var(--space-2) 0;
+}
+
+/* /////////////////////////////////////////NAVIGATION.CSS */
+
+
+/* /////////////////////////////////////////STYLES.CSS */
+
+.myHeader {
+  color: white;
+  margin-top: 12px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+
+#autoCreateButton:hover {
+  color: white;
+  background-color: #343A40;
+}
+
+.pounds {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  color: black;
+  padding-top: 8px;
+}
+
+#heading {
+  height: 90px;
+  background-color: #343A40;
+  text-align: center;
+  margin-top: 140px;
+}
+
+@media (min-width: 48rem) {
+  #heading {
+    height: 90px;
+    background-color: #343A40;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input.myCheck[type="checkbox"] {
+  width: auto;
+  margin-left: 20px;
+}
+
+.euro {
+  font-family: Verdana, sans-serif;
+  margin-left: 16px;
+  text-align: center;
+}
+
+.naira {
+  margin: 0;
+  padding: 20px;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  font-weight: 94;
+  color: #1B1A17;
+}
+
+.pageLink { font-size: 17px; text-decoration: none; font-family: Verdana, sans-serif; width: 20%; }
+.pageLink:hover { text-decoration: none}
+
+.time {
+  width: 60%;
+  font-size: 17px;
+  font-family: Verdana, sans-serif;
+  padding-top: 16px;
+}
+
+#delButton {
+  height: 30px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+#delButton:hover {
+  color: red;
+}
+
+.innerBox {
+  background-color: #FFFFFF;
+  padding: 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+} /* innerBox is 100% of the 88% of outerBox
+ */
+
+.innerBox:hover {
+  background-color: #F4F6FA
+}
+
+.outerBox {
+  margin-top: 100px;
+  margin-left: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  width: 92%;
+  background-color: #fff;
+}
+
+@media (min-width: 48rem) {
+  .outerBox {
+    margin-top: 120px;
+    margin-left: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    width: 810px;
+    background-color: #fff;
+  }
+
+  .pageLink { font-size: 17px; text-decoration: none; font-family: Verdana, sans-serif; width: 30%; }
+  .pageLink:hover { text-decoration: none}
+
+  .innerBox {
+    background-color: #FFFFFF;
+    padding: 30px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .time {
+    width: 40%;
+    font-size: 17px;
+    font-family: Verdana, sans-serif;
+    padding-top: 16px;
+  }
+}
+
+.myList:hover {
+  opacity : 0.9;
+  background-color: #343A40;
+}
+
+button.myList {
+  min-height: 50px;
+  text-align: center;
+  width: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-color: transparent;
+  background-color: #343A40;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+  margin-left: 10px;
+}
+
+input.star[type="text"] {
+  text-align: left;
+  height: 50px;
+  top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #EAEAEA;
+  outline-color: hsla(0, 100%, 50%, 0.1);
+  outline-style: none;
+  outline-width: 1px;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+  margin-left: 16px;
+}
+
+input.star[type="text"]:focus {
+  outline: none;
+}

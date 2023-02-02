@@ -1,0 +1,19 @@
+label {
+    color: var(--color-gray-100);
+    display: block;
+    margin-bottom: var(--space-2);
+}
+input, textarea {
+    font: inherit;
+    padding: var(--space-2);
+    border-radius: var(--border-radius-small);
+    border: none;
+    width: 90%;
+}
+
+footer {
+    color: var(--color-gray-300);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 100px
+}

@@ -1,0 +1,243 @@
+html {
+  background-color: #fff;
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* height: 100%; */
+}
+
+#entry-logo a {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--color-primary-140);
+    text-decoration: none;
+}
+
+.background-area {
+  background-image: url("/images/userTODO.jpg");
+  height: 500px;
+  /* width: 165vw; */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.myBg .display-3 {
+  width: 505px;
+  margin: 5rem auto 0;
+  font-size: 1.875rem;
+  padding-top: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Montserrat", "sans-serif";
+  /* color: #D8D7D5; */
+  color: white;
+
+}
+
+.myBg .lead {
+  margin: 0.3rem auto 0;
+  width: 510px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: "Montserrat", "sans-serif";
+  text-align: center;
+}
+
+#get-started {
+
+  margin: 2px auto 0;
+  display: block;
+  border: none;
+  font-family: "Montserrat", "sans-serif";
+  letter-spacing: 0;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 12px;
+  background-color: white;
+  color: var(--color-primary-140);
+  padding: 0.9rem 0.9rem;
+}
+
+#get-started:hover {
+  background-color: #FEFBF6;
+  color: var(--color-primary-140);
+}
+
+.menu-div {
+  width: 300px;
+  height: 300px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+/* #menu-section-content {
+  height: 1000px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+} */
+
+hr.hr{
+  color: grey;
+  border-color: grey;
+  border-style: dotted none none;
+  border-width:6px;
+  width: 7%;
+  height: 2px;
+  margin: 100px auto;
+}
+
+@media only screen and (max-width: 319px) and (min-width: 50px) {
+  .background-area {
+    background-image: url("/images/userTODO.jpg");
+    height: 150%;
+    /* width: 1800vw; */
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  hr.hr {
+    display: none;
+  }
+
+  #get-started  {
+    padding: 1rem 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .background-area {
+    background-image: url("/images/userTODO.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .myBg .display-3 {
+    font-size: 2.375rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  .myBg .lead {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  #get-started  {
+    font-size: 1.1rem;
+    padding: 1.1rem 1.1rem;
+  }
+
+}
+
+@media only screen and (min-width: 768px)  {
+  .background-area {
+    background-image: url("/images/userTODO.jpg");
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  hr.hr{
+    color: grey;
+    border-color: grey;
+    border-style: dotted none none;
+    border-width:6px;
+    width: 7%;
+    height: 2px;
+    margin: 100px auto;
+  }
+
+  .myBg .display-3 {
+    padding-top: 2rem;
+    color: white;
+    font-size: 2.2rem;
+    line-height: 1.1;
+
+  }
+
+  .myBg .lead {
+    margin: 1rem auto 0;
+    width: 510px;
+    font-size: 1.1875rem;
+    letter-spacing: -0.01em;
+    text-align: center;
+    font-family: "Montserrat", "sans-serif";
+  }
+
+  #get-started {
+
+    margin: 10px auto 0;
+    display: block;
+    border: none;
+    font-family: "Montserrat", "sans-serif";
+    font-weight: bold;
+    border-radius: 12px;
+    background-color: white;
+    color: var(--color-primary-140);
+    padding: 0.8rem 1rem;
+  }
+
+  #get-started:hover {
+    background-color: #FEFBF6;
+    color: var(--color-primary-140);
+  }
+
+
+/* width: auto ;
+max-width: 100% ;
+height: auto ; */
+
+.register, .login {
+  margin-top: 20px;
+}
+
+.register {
+  margin-right: 30px;
+}
+
+/* #intro {
+  margin-bottom: 20px;
+} */
+
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px
+}

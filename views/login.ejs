@@ -1,0 +1,40 @@
+<%- include("head", {pageTitle: "Login"}) -%>
+
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <main>
+
+      <%- include("span") -%>
+
+      <h1 id="login-signUp" class="font-class">Login</h1>
+
+      <% if (inputData.hasError) { %>
+        <section class="alert">
+          <h2 class="font-class"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Invalid Credentials</h2>
+          <p id="input-error" class="font-class"><%= inputData.message %></p>
+        </section>
+      <% } %>
+
+      <!-- Makes POST request to /login route -->
+      <form action="/login" method="POST">
+        <p>
+          <label for="username" class="font-class">Enter Username</label>
+          <input type="text" id="user-name" class="font-class" name="username" onkeyup="this.value = this.value.toLowerCase();"  value="<%= inputData.confirmName %>" required>
+        </p>
+
+        <p>
+          <label for="password" class="font-class">Password</label>
+          <input type="password" id="password" class="font-class" name="password" value="<%= inputData.password %>">
+        </p>
+        <button type="submit" class="details btn">Login</button>
+        <p id="switch-form" class="font-class"><a href="/signup">Create a new user</a></p>
+      </form>
+    </main>
+
+
+
+  <%- include("footer") -%>

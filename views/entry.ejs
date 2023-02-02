@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="/css/entry.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+<%- include("head", {pageTitle: "Entry Page"}) -%>
+  <%- include("entry-span") -%>
+
+
+<section id="top-section">
+  <div class="top-div">
+    <div class="title-div">
+      <h1 class="title-h1">Organize your <br> everyday todo-list.</h2>
+      <p class="title-p">Create custom events, Keep track of to-do's, <br> Edit, Save & Repeat.</p>
+    </div>
+    <img class="title-img" src="/images/newTodo.avif" alt="">
+  </div>
+</section>
+
+<section id="third-section">
+  <div class="" id="menu-content-section">
+    <div class="menu-div">
+      <img class="menu-img" src="/images/bulb-img.avif" alt="">
+      <h3 class="third-section-h3-text">Custom Lists <i class="fa fa-cog" aria-hidden="true"></i></h3>
+      <p class="image-text">Create and manage several <br> seperate todo-lists.</p>
+    </div>
+    <div class="menu-div">
+      <img class="menu-img" src="/images/calendar-img.avif" alt="">
+      <h3 class="third-section-h3-text">Timestamp <i class="fa fa-calendar-check-o" aria-hidden="true"></i></h3>
+      <p class="image-text">Upon custom creation, each list <br>is loaded with a timestamp. </p>
+    </div>
+    <div class="menu-div">
+      <img class="menu-img" src="/images/dull-delete.avif" alt="">
+      <h3 class="third-section-h3-text">Delete <i class="fa fa-times-circle-o" aria-hidden="true"></i></h3>
+      <p class="image-text">Upon completion, independent <br>lists are deleted. </p>
+    </div>
+  </div>
+</section>
+
+<section id="second-section">
+  <div class="second-div">
+    <h2 class="h2-info">With us, remain a step ahead <i id="check-tick" class="fa fa-check-circle" aria-hidden="true"></i> </h2>
+    <div class="inner-second-div">
+      <p class="p-info"> Not a member? Join for free. Try it yourself.</p>
+      <form action="/signup" method="GET">
+            <button type="submit" id="get-started">Start for free</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="fourth-section">
+  <div class="logos-container-div">
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-1.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-2.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-3.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-4.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-5.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-6.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-7.png" alt="">
+    </div>
+    <div class="logo-div">
+      <img class="logo-img" src="/images/img-8.png" alt="">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="" id="newsletter">
+
+  </div>
+</section>
+
+<section id="sixth-section">
+  <div class="newsletter-container">
+    <div class="newsletter-form">
+      <h3>Subscribe To Our Newsletter</h3>
+      <p>For more information on our services & future updates, sign up for our newsletter. </p>
+      <form class="form-style" action="" method="post">
+
+        <div class="input-group mb-3" id="maze">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="mail-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+          </div>
+          <input type="email" class="form-control" id="email-input" placeholder="Your email">
+          <button id="btn-mail" class="btn btn-outline-secondary" type="button">Get started</button>
+        </div>
+
+        <!-- <input type="email" name="email" class="form-control bottom" placeholder="Email" required>
+        <button class="btn btn-sm btn-block" id="newsletter-btn" type="submit">Sign Me Up!</button> -->
+      </form>
+    </div>
+    <div class="newsletter-img-div">
+      <img class="newsletter-img" src="/images/newsl-xx.png" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="fifth-section">
+  <div class="top-container">
+    <div class="top-left-div">
+      <div class="message-support">
+        <h3>DESIGNED FOR</h3>
+        <p>All users</p>
+      </div>
+      <div class="message-support">
+        <h3>SPONSERS</h3>
+        <p>K-Natural inc</p>
+        <p>Grey Compass inc</p>
+        <p>My Big Sis</p>
+        <p>The Beach</p>
+        <p>Champ</p>
+        <p>C-Waves</p>
+      </div>
+      <div class="message-support">
+        <h3>BLOG</h3>
+        <p>In development</p>
+      </div>
+      <div class="message-support">
+        <h3>SUPPORT</h3>
+        <p>24/7 support <i class="fa fa-headphones" aria-hidden="true"></i></p>
+        <a href="#" class="contact-us">Contact us <i class="fa fa-headphones" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- /* */ -->
+
+</section>
+
+<section id="seventh-section">
+  <div class="footer-container-div">
+    <div class="copright">
+      <h4>Made with <i class="fa fa-heart" id="love-heart" aria-hidden="true"></i> in 9ja.</h4>
+      <p><i class="fa fa-copyright" aria-hidden="true"></i> 2022 KD3. All rights reserved.</p>
+    </div>
+    <div class="follow-us-div">
+      <div class="footer-icons">
+        <a href="#"><i id="footer-icon" class="fa fa-youtube-play youtube" aria-hidden="true"></i></a>
+        <a href="#"><i id="footer-icon" class="fa fa-github github" aria-hidden="true"></i></a>
+        <a href="#"><i id="footer-icon" class="fa fa-instagram instagram" aria-hidden="true"></i></a>
+        <a href="#"><i id="footer-icon" class="fa fa-twitter twitter" aria-hidden="true"></i></a>
+        <a href="#"><i id="footer-icon" class="fa fa-facebook facebook" aria-hidden="true"></i></a>
+        <a href="#"><i id="footer-icon" class="fa fa-linkedin linkedin" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  </head>
+
+    <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="app.js" charset="utf-8"></script>
+    </body>
+</html>
