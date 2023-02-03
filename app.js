@@ -282,12 +282,65 @@ app.post("/signup", async function (req, res) {
     !enteredEmail ||
     !enteredConfirmEmail ||
     !enteredPassword ||
-    !enteredNameOfUser ||
+    !enteredNameOfUser
+  ) {
+    req.session.inputData = {
+      hasError: true,
+      message: "🖊️ Please fill in all your details.",
+      email: enteredEmail,
+      confirmEmail: enteredConfirmEmail,
+      confirmName: enteredNameOfUser,
+      password: enteredPassword,
+    };
+
+    req.session.save(function () {
+      // save the session before it gets redirected
+      res.redirect("/signup");
+    });
+    return; // to prevent crashing, i.e Cannot set headers after they are sent to the client
+  }
+
+  var regularExpressionPattern =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+
+  if (regularExpressionPattern.test(enteredEmail) === false) {
+    req.session.inputData = {
+      // when email isn't valid
+      hasError: true,
+      message: "Enter a valid email address ",
+      email: enteredEmail,
+      confirmEmail: enteredConfirmEmail,
+      confirmName: enteredNameOfUser,
+      password: enteredPassword,
+    };
+
+    req.session.save(function () {
+      res.redirect("/signup");
+    });
+    return;
+  }
+
+  if (enteredEmail !== enteredConfirmEmail) {
+    req.session.inputData = {
+      hasError: true,
+      message: "Email addresses mismatch!",
+      email: enteredEmail,
+      confirmEmail: enteredConfirmEmail,
+      confirmName: enteredNameOfUser,
+      password: enteredPassword,
+    };
+
+    req.session.save(function () {
+      // save the session before it gets redirected
+      res.redirect("/signup");
+    });
+    return; // to prevent crashing, i.e Cannot set headers after they are sent to the client
+  }
+
+  if (
     enteredPassword.trim() < 8 ||
     enteredNameOfUser.trim() < 5 ||
-    enteredNameOfUser.trim() > 10 ||
-    enteredEmail !== enteredConfirmEmail ||
-    !enteredEmail.includes("@")
+    enteredNameOfUser.trim() > 10
   ) {
     req.session.inputData = {
       hasError: true,
@@ -343,13 +396,15 @@ app.post("/signup", async function (req, res) {
     return;
   }
 
-  var regularExpression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,16}$/;
+  var regularExpression =
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,16}$/;
 
-  if(regularExpression.test(enteredPassword) === false ) {
+  if (regularExpression.test(enteredPassword) === false) {
     req.session.inputData = {
       // when password doesn't fit condition
       hasError: true,
-      message: "Your password must contain at least a number, a letter in uppercase, a letter in lowercase and a special character😕. ",
+      message:
+        "Your password must contain at least a number, a letter in uppercase & lowercase, and a special character🙃. ",
       email: enteredEmail,
       confirmEmail: enteredConfirmEmail,
       confirmName: enteredNameOfUser,
